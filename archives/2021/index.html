@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--layout.ejs的意思是共用的布局文件-->
+<!--partial()是个函数，来包含其他文件，使得我们能够更好的组织代码。-->
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="renderer" content="webkit">
+  <title>love</title>
+
+<!--Baidu Tongji-->
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+     
+
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-clock/lib/clock.min.css" /><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">LOVE</a>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/%20%7C%7C%20icon-homepage-01%20%7C%7C%20faa-tada" class="menu-item-link">Menu.主页</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/%5Bobject%20Object%5D" class="menu-item-link">Menu.文库 || icon-document-01 || faa-tada</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/%5Bobject%20Object%5D" class="menu-item-link">Menu.日常 || icon-menu01-01 || faa-tada</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/%5Bobject%20Object%5D" class="menu-item-link">Menu.镜像站点 || icon-organizationalstructure-01 || faa-tada</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+
+      <main class="main">
+      <section class="date">
+  <div class="date">
+      <h2>王浩羽 和 杨晓红 已经在一起</h2>
+      <div class="timer">
+      <b id="d"></b> 天 <b id="h"></b> 时 <b id="m"></b> 分 <b id="s"></b> 秒
+      </div>
+      <div class="song">
+          <!--页面底部歌词-->
+          <!-- require APlayer -->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+          <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+          <!-- require MetingJS -->
+          <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+          <meting-js 
+          server="netease" 
+          type="playlist" 
+          id="2042070338" 
+          fixed="true"
+
+          autoplay="false" 
+          order="list" 
+          loop="all"></meting-js>
+      </div>
+  </div>
+
+<!--计时器js-->
+      <script>
+        function timer() {
+        window.setTimeout("timer()", 1000);
+        var start = new Date("2022/08/06 20:30:00");
+        var t = new Date().getTime() - start;
+        var h = ~~(t / 1000 / 60 / 60 % 24);
+        if (h < 10) {h = "0" + h;}
+        var m = ~~(t / 1000 / 60 % 60);
+        if (m < 10) { m = "0" + m;}
+        var s = ~~(t / 1000 % 60);
+       if (s < 10) {s = "0" + s;}
+        document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+       document.getElementById('h').innerHTML = h;
+       document.getElementById('m').innerHTML = m;
+       document.getElementById('s').innerHTML = s;}
+        timer();
+      </script> 
+<!--END：计时器js-->
+
+<!--鼠标点击显示爱心-->
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+</section>
+      </main>
+
+      
+
+    </div>
+
+  <!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://unpkg.zhimg.com/hexo-butterfly-clock/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_injector_config();
+  }
+  </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://unpkg.zhimg.com/hexo-butterfly-clock/lib/clock.min.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '0.9s');
+    arr[i].setAttribute('data-wow-delay', '0.9s');
+    arr[i].setAttribute('data-wow-offset', '100');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://unpkg.zhimg.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://unpkg.zhimg.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><!-- hexo injector body_end end --></body>
+</html>
+
