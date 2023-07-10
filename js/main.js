@@ -449,7 +449,7 @@ window.refreshFn = () => {
     acrylic.addRuntime()
     acrylic.addPhotoFigcaption()
     GLOBALCONFIG.lazyload.enable && acrylic.lazyloadImg()
-    GLOBALCONFIG.lightbox && acrylic.lightbox('#article-container img, #bber .bber-content-img img, #album_detail album-content-img img')
+    GLOBALCONFIG.lightbox && acrylic.lightbox('#article-container img, #bber .bber-content-img img, #album_detail img')
     GLOBALCONFIG.randomlinks && randomLinksList()
     PAGECONFIG.toc && toc.init()
     if (PAGECONFIG.is_post || PAGECONFIG.is_page) {
