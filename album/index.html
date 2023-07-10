@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DreamCity</title>
+<title>相册集 | DreamCity</title>
 <noscript>开启Javascript是必要的</noscript>
 <link rel="icon" type="image/x-icon" href="/img/avatar.webp">
 <link rel="apple-touch-icon" href="/img/avatar.webp">
 <meta name="apple-mobile-web-app-title" content="DreamCity">
 <link rel="bookmark" href="/img/avatar.webp">
 <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/avatar.webp">
-<meta name="description" content="">
+<meta name="description" content="相册集">
 <meta name="theme-color" content="#1C1C1F">
 <link rel="stylesheet" href="/css/var.css">
 <link rel="stylesheet" href="/css/main.css">
@@ -47,7 +47,7 @@
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4077644_mz41fax7ekf.css">
 
-<script>var GLOBALCONFIG = {"root":"/","runtime":"2023-07-07 00:00:00","lazyload":{"enable":true,"error":"/img/acrylic.webp"},"hightlight":{"enable":true,"limit":200},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"},"search":{"empty":"搜索结果为空","hit":"已为您找到 ${query} 条结果","placeholder":"输入关键词快速查找"}},"covercolor":true,"comment":{"enable":true,"twikooUrl":"https://twikoo.jiojio.icu/"},"algolia":{"appId":"7GVFIRZM0K","apiKey":"753ef26234d4aa3631b541018e8a1eaa","indexName":"myblog"}};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":false,"page":false,"comment":false};</script>
+<script>var GLOBALCONFIG = {"root":"/","runtime":"2023-07-07 00:00:00","lazyload":{"enable":true,"error":"/img/acrylic.webp"},"hightlight":{"enable":true,"limit":200},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"},"search":{"empty":"搜索结果为空","hit":"已为您找到 ${query} 条结果","placeholder":"输入关键词快速查找"}},"covercolor":true,"comment":{"enable":true,"twikooUrl":"https://twikoo.jiojio.icu/"},"algolia":{"appId":"7GVFIRZM0K","apiKey":"753ef26234d4aa3631b541018e8a1eaa","indexName":"myblog"}};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":true,"page":"album","toc":false,"comment":true};</script>
     <meta name="generator" content="Hexo 6.3.0"></head>
     <body id="body">
         
@@ -270,7 +270,7 @@
         </div>
         <div id="page-name-mask">
             <div id="page-name">
-                <a id="page-name-text" onclick="acrylic.toTop()">categories</a>
+                <a id="page-name-text" onclick="acrylic.toTop()">相册集</a>
             </div>
         </div>
         <div id="menus">
@@ -396,13 +396,69 @@
                 <main class="layout hide-aside" id="content-inner">
     <div id="page">
         
-                <h1 class="page-title">分类</h1>
-<div class="category-lists">
-    <div class="tag-cloud-list is-center">
+                <div id='album' class="thumbnail_canvas">
+    <div class="author-content author-content-item album single nolazyload" style="background: url(/img/hello.jpg) no-repeat center;background-size: cover;">
+        <div class="card-content">
+            <div class="author-content-item-tips">相册集</div>
+            <span class="author-content-item-title">服内部分建筑和机器照片</span>
+            <div class="content-bottom">
+                <div class="tips">提示</div>
+            </div>
+        </div>
+    </div>
+    <div class="card-album">
         
+            
+            <div class="card" onclick="pjax.loadUrl('/album-detail')">
+                <img class="card_cover nolazyload" src="">
+                <div class="card__content">
+                    <p class="card__category">建筑</p>
+                    <h3 class="card__heading">这是服内部分建筑的图片</h3>
+                </div>
+            </div>
+        
+            
+            <div class="card" onclick="pjax.loadUrl('/机器')">
+                <img class="card_cover nolazyload" src="">
+                <div class="card__content">
+                    <p class="card__category">机器</p>
+                    <h3 class="card__heading">这是服内部分机器的照片</h3>
+                </div>
+            </div>
+        
+            <div class="album-content-nocover"></div>
+            <div class="album-content-nocover"></div>
+            <div class="album-content-nocover"></div>
     </div>
 </div>
              
+        
+            <div id="post-comment">
+    <div class="comment-head">
+        <div class="comment-headline">
+            <i class="fas fa-message fa-fw"></i>
+            <span> 评论</span>
+        </div>
+    </div>
+    <div class="comment-wrap">
+        <div id="comment"></div>
+        <script>
+    async function initComment(){
+        var initOptions = Object.assign(
+            {"envId":"https://twikoo.jiojio.icu/","path":"window.location.pathname"},
+            {
+                el: '#comment',
+                onCommentLoaded: function() {
+                    GLOBALCONFIG.lightbox && acrylic.lightbox('#article-container img, #twikoo .tk-content img:not(.tk-owo-emotion)') 
+                }
+            }
+        )
+        await twikoo.init(initOptions)
+             
+    }
+</script>
+    </div>
+</div>
             
     </div>
        
@@ -484,6 +540,17 @@
 
 
 <div id="js-pjax">
+    
+        
+<script src="/lib/waterfall.min.js"></script>
+
+        <script>
+            window.addEventListener('resize', utils.throttle(function () {
+                if (document.getElementById('waterfall')) {
+                    acrylic.reflashEssayWaterFall();
+                }
+            }), 500);
+        </script>
     
      
 </div>
