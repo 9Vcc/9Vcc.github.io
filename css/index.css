@@ -18726,7 +18726,7 @@ div#category {
 
 /*夜间模式伪类遮罩层透明*/
 [data-theme="dark"] #recent-posts > .recent-post-item {
-  background: #121212;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 [data-theme="dark"] .card-widget {
